@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -21,9 +21,13 @@ function App() {
 
   const [result, setResult] = useState(null);
 
-  if (!result) {
-    setResult(groupArrayElements([1, 2, 3, 4, 5], 3));
-  }
+  useEffect(() => {
+    if (!result) {
+      const groups = groupArrayElements([1, 2, 3, 4, 5], 3);
+      setResult(groups);
+      console.log('Console Output:', JSON.stringify(groups));
+    }
+  }, [result]);  // We're using the useEffect hook to make sure we only log when result changes
 
   return (
     <div className="App">
