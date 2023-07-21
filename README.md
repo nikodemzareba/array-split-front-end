@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+1) Pass some numbers to an array and then amount by how many times you want it split.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Example:
 
-## Available Scripts
+  groupArrayElements([1, 2, 3, 4, 5], 3);
+
+Result:
+
+   [ [ 1, 2 ], [ 3, 4 ], [ 5 ] ]
+
+
+/////// This is a Front-End project with React/JavaScript /////////
+
+## Getting started
 
 In the project directory, you can run:
 
